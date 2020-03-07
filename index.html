@@ -76,9 +76,15 @@ h2, h3
 
 .SocialNetworkIcon
 {
-	float: left;
-	width: 100px;
-	height: 100px;
+  position:relative;
+  top:0px;
+  left:10px;
+  
+  display:inline-block;
+  float:left;
+  
+	width: 64px;
+	height: 64px;
 	border: 0px;
 	margin: 0px;
 	
@@ -86,18 +92,27 @@ h2, h3
 	background-repeat: no-repeat;
 }
 
-#FacebookIcon 		{	background-position: -100px    0px;	}
-#TwitterIcon		  {	background-position: -100px -100px;	}
-#GooglePlusIcon 	{	background-position: -200px    0px;	}
-#YouTubeIcon		  {	background-position:    0px -100px;	}
-#iTunesIcon			  {	background-position: -300px    0px;	}
-#SoundCloudIcon 	{	background-position: -200px -100px;	}
-#BandcampIcon 		{	background-position:    0px    0px;	}
-#ReverbNationIcon {	background-position: -300px -100px;	}
-#PeriscopeIcon	 	{	background-position: -400px -100px;	}
-#WordpressIcon	 	{	background-position: -400px    0px;	}
-#KatchIcon		 	  {	background-position: -400px -200px;	}
+#iTunesIcon    		{	background-position:    0px   0px;	}
+#AppleMusicIcon		{	background-position:  -64px   0px;	}
+#InstagramIcon		{	background-position: -128px   0px;	}
+#SpotifyIcon  		{	background-position: -192px   0px;	}
 
+#TwitterIcon		  {	background-position:    0px  -64px;	}
+#YouTubeIcon    	{	background-position:  -64px  -64px;	}
+#GoogleIcon		    {	background-position: -128px  -64px;	}
+#FacebookIcon			{	background-position: -192px  -64px;	}
+
+#GooglePlayIcon 	{	background-position: 0px -128px;	}
+
+
+.PurchaseButton
+{
+	border: 0px;
+	margin: 0px;
+	
+	background-image: url('https://jamingrey.github.io/aaronswanger/LogosCombined.png');
+	background-repeat: no-repeat;
+}
 
 #PaypalDonateButton { float: left;  vertical-align: top; background-position:    0px   -300px; width: 170px; height: 64px; }
 #IhopKCDonateButton { float: right; vertical-align: top; background-position: -200px   -300px; width: 170px; height: 64px; }
@@ -128,6 +143,27 @@ h2, h3
   border: 2px solid black;
   border-radius: 0px;
   width:100%;
+}
+
+.Button
+{
+  display:inline-block;
+  min-width: 20em;
+  padding: 0.5em;
+  margin-top: 10px;
+  
+  background-color: rgba(0,0,0,0);
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.40) 60%, rgba(0,0,0,0.70) 100%);
+  
+  text-shadow: 3px 3px rgba(0,0,0,1);
+}
+
+.ButtonText
+{
+  display:inline-block;
+  font-size: 2em;
+  margin-top: 0.4em;
+  margin-left: 20px;
 }
 
 
@@ -190,21 +226,6 @@ h2, h3
 
 } /* End of desktop */
 
-.external_link
-{
-  min-width: 10em;
-  padding: 0.75em;
-  margin-top: 10px;
-  
-  font-size: 2em;
-  text-align: center;
-  
-  background-color: rgba(0,0,0,0);
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.40) 60%, rgba(0,0,0,0.70) 100%);
-  
-  text-shadow: 3px 3px rgba(0,0,0,1);
-}
-
 </style>
 
 </head>
@@ -223,8 +244,8 @@ h2, h3
   </div>
   <br>
   <div style="width:100%;">
-  <a style="float:left;" href="https://www.paypal.me/ASwanger"><div id="PaypalDonateButton" data-tip="Support my ministry via PayPal" class="SocialNetworkIcon"></div></a>
-  <a style="float:right;" href="https://www.ihopkc.org/give/staffsupport/form/?cid=701d0000000OMTZAA4&sname=Aaron%20Swanger"><div id="IhopKCDonateButton" data-tip="Support my ministry via IHOP-KC" class="SocialNetworkIcon"></div></a>
+  <a style="float:left;" href="https://www.paypal.me/ASwanger"><div id="PaypalDonateButton" data-tip="Support my ministry via PayPal" class="PurchaseButton"></div></a>
+  <a style="float:right;" href="https://www.ihopkc.org/give/staffsupport/form/?cid=701d0000000OMTZAA4&sname=Aaron%20Swanger"><div id="IhopKCDonateButton" data-tip="Support my ministry via IHOP-KC" class="PurchaseButton"></div></a>
   </div>
 </div>
 </div>
@@ -233,8 +254,8 @@ h2, h3
 <div class="album_box basic_styling">
   <a href="https://store.ihopkc.org/products/114868"><img class="picture" src="https://jamingrey.github.io/aaronswanger/ABetterWord.jpg"></a><br>
   <div class="AlbumLinkBox">
-          <a href="http://www.amazon.com/A-Better-Word-Aaron-Swanger/dp/B00B6N35UW"><div id="AmazonPurchaseButton" class="SocialNetworkIcon"></div></a>
-          <a href="https://music.apple.com/us/album/a-better-word/594661925"><div id="iTunesPurchaseButton" class="SocialNetworkIcon"></div></a>
+          <a href="http://www.amazon.com/A-Better-Word-Aaron-Swanger/dp/B00B6N35UW"><div id="AmazonPurchaseButton" class="PurchaseButton"></div></a>
+          <a href="https://music.apple.com/us/album/a-better-word/594661925"><div id="iTunesPurchaseButton" class="PurchaseButton"></div></a>
   </div>
 </div>
 </div>
@@ -242,51 +263,52 @@ h2, h3
 
 <br><br>
 <div id="LinkBox" class="float_left_on_desktop horizontally_center_on_mobile" style="padding:10px;">
-  <h3 class="horizontally_center_on_mobile" style="color:white; text-shadow: 3px 3px 5px rgba(0,0,0,1); display:inline-block; padding-left:30px; text-align: center;">Follow along and see what I'm up to!</h3><br>
+  <h2 class="horizontally_center_on_mobile" style="color:white; text-shadow: 3px 3px 5px rgba(0,0,0,1); display:inline-block; padding-left:30px; text-align: center;">Follow along and see what I'm up to!</h2><br><br>
 
   <a style="text-decoration:none;" href="https://mobile.twitter.com/Aaron_Swanger">
-  <div class="basic_styling external_link horizontally_center_on_mobile">
-  Twitter
+  <div class="basic_styling Button horizontally_center_on_mobile">
+  <div id="TwitterIcon" class="SocialNetworkIcon"></div> <div class="ButtonText">Twitter</div>
   </div></a><br>
   
   <a style="text-decoration:none;" href="https://open.spotify.com/artist/4O4PMt3FvTtgxxWZkP0gUm?si=_SK-VQG3RPePcob4D6hBhg">
-  <div class="external_link basic_styling horizontally_center_on_mobile">
-  Spotify
+  <div class="Button basic_styling horizontally_center_on_mobile">
+  <div id="SpotifyIcon" class="SocialNetworkIcon"></div> <div class="ButtonText">Spotify</div>
+  
   </div></a><br>
   
   <a style="text-decoration:none;" href="https://music.apple.com/us/artist/aaron-swanger/594661928">
-  <div class="external_link basic_styling horizontally_center_on_mobile">
-  Apple Music
+  <div class="Button basic_styling horizontally_center_on_mobile">
+  <div id="AppleMusicIcon" class="SocialNetworkIcon"></div> <div class="ButtonText">Apple Music</div>
   </div></a><br>
   
   <a style="text-decoration:none;" href="https://music.apple.com/us/album/a-better-word/594661925">
-  <div class="external_link basic_styling horizontally_center_on_mobile">
-  iTunes
+  <div class="Button basic_styling horizontally_center_on_mobile">
+  <div id="iTunesIcon" class="SocialNetworkIcon"></div> <div class="ButtonText">iTunes</div>
   </div></a><br>
   
   <a style="text-decoration:none;" href="https://play.google.com/store/music/artist/Aaron_Swanger?id=Azefpbqx56v6t6dv6mckxmzusv4&hl=en_US">
-  <div class="external_link basic_styling horizontally_center_on_mobile">
-  Google Play Music
+  <div class="Button basic_styling horizontally_center_on_mobile">
+  <div id="GooglePlayIcon" class="SocialNetworkIcon"></div> <div class="ButtonText">Google Play</div>
   </div></a><br>
 
   <a style="text-decoration:none;" href="https://www.youtube.com/channel/UCIjYtVqYASYdKf8nPzE6o3g">
-  <div class="external_link basic_styling horizontally_center_on_mobile">
-  YouTube
+  <div class="Button basic_styling horizontally_center_on_mobile">
+  <div id="YouTubeIcon" class="SocialNetworkIcon"></div> <div class="ButtonText">YouTube</div>
   </div></a><br>
 
   <a style="text-decoration:none;" href="https://www.instagram.com/aaronswanger/">
-  <div class="external_link basic_styling horizontally_center_on_mobile">
-  Instagram
+  <div class="Button basic_styling horizontally_center_on_mobile">
+  <div id="InstagramIcon" class="SocialNetworkIcon"></div> <div class="ButtonText">Instagram</div>
   </div></a><br>
 
   <a style="text-decoration:none;" href="https://www.facebook.com/AaronSwangerMusic/">
-  <div class="external_link basic_styling horizontally_center_on_mobile">
-  Facebook
+  <div class="Button basic_styling horizontally_center_on_mobile">
+  <div id="FacebookIcon" class="SocialNetworkIcon"></div> <div class="ButtonText">Facebook</div>
   </div></a><br>
 
   <a style="text-decoration:none;" href="https://g.co/kgs/iWqZBA">
-  <div class="external_link basic_styling horizontally_center_on_mobile">
-  Google
+  <div class="Button basic_styling horizontally_center_on_mobile">
+  <div id="GoogleIcon" class="SocialNetworkIcon"></div> <div class="ButtonText">Google</div>
   </div></a><br>
   
   <br><br><br><br>
