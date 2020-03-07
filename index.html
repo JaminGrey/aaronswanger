@@ -10,7 +10,7 @@ html
   background-color: powderblue;
   background-image: url(https://jamingrey.github.io/aaronswanger/TiledBackground.jpg);
   background-repeat:repeat;
-  box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+  
   margin: 0px;
 }
 
@@ -19,6 +19,12 @@ body
 	height: 100%;
 	margin: 0px;
   background: none;
+}
+
+/* fills up the entire body, and contains everything inside it */
+#OuterBox
+{
+  box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
 }
 
 a, img
@@ -140,8 +146,14 @@ h2, h3
 
   .album_box
   {
+    margin:30px;
     width: 80%;
-    margin: 0 auto;
+  }
+
+  .horizontally_center_on_mobile
+  {
+     display:table;
+     margin: 0 auto;
   }
 
   .float_left_on_desktop
@@ -166,6 +178,11 @@ h2, h3
     width: 40%;
     max-width: 600px;
   }
+  
+  .horizontally_center_on_mobile
+  {
+    /* do nothing */
+  }
 
   .float_left_on_desktop
   {
@@ -185,17 +202,17 @@ h2, h3
 .external_link
 {
   min-width: 15em;
-
+  margin-top: 10px;
 }
 
 </style>
 
 </head>
-<body>
+<body><div id="OuterBox">
 
-<div id="aaron_bio" class="album_box basic_styling float_right_on_desktop">
+<br><div id="aaron_bio" class="album_box basic_styling float_right_on_desktop horizontally_center_on_mobile">
 <img class="picture" src="https://jamingrey.github.io/aaronswanger/BioPhoto.jpg"><br>
-<b>Building Bridges of Encounter Through Worship and the Word of God</b><br><br>
+<h3>Building Bridges of Encounter Through Worship and the Word of God</h3><br><br>
 
 <b>Aaron Swanger</b> is a full time worship artist at HopeCityKC, an outreach ministry from the International House of Prayer Kansas City (IHOPKC). He serves as a pastor and Intercessory/Inner-City missionary.<br>
 
@@ -204,7 +221,7 @@ h2, h3
         
 </div>
 
-<div id="album_betterword" class="album_box basic_styling float_left_on_desktop">
+<br><div id="album_betterword" class="album_box basic_styling float_left_on_desktop horizontally_center_on_mobile">
 <a href="https://store.ihopkc.org/products/114868"><img class="picture" src="https://jamingrey.github.io/aaronswanger/ABetterWord.jpg"></a><br>
 <div id="AlbumLinkBox">
 				<a href="http://www.amazon.com/A-Better-Word-Aaron-Swanger/dp/B00B6N35UW"><div id="AmazonPurchaseButton" class="SocialNetworkIcon"></div></a>
@@ -213,25 +230,25 @@ h2, h3
 </div>
 
 <br><br><br><br>
-<div style="padding:10px;">
-  <b style="color:white; text-shadow: 3px 3px 5px rgba(0,0,0,1); display:inline-block; padding-left:10px;">Follow along and see what I'm up to!</b><br>
+<div id="LinkBox" class="float_left_on_desktop horizontally_center_on_mobile" style="padding:10px;">
+  <h3 class="horizontally_center_on_mobile" style="color:white; text-shadow: 3px 3px 5px rgba(0,0,0,1); display:inline-block; padding-left:10px;">Follow along and see what I'm up to!</h3><br>
 
-  <div class="external_link basic_styling">
+  <div class="external_link basic_styling horizontally_center_on_mobile">
   Linky
   </div><br>
 
-  <div class="external_link basic_styling">
+  <div class="external_link basic_styling horizontally_center_on_mobile">
   Linky
   </div><br>
 
-  <div class="external_link basic_styling">
+  <div class="external_link basic_styling horizontally_center_on_mobile">
   Linky
   </div><br>
 
-  <div class="external_link basic_styling">
+  <div class="external_link basic_styling horizontally_center_on_mobile">
   Linky
   </div><br>
 </div>
 
-</body>
+</div></body>
 </html>
