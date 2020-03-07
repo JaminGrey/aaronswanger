@@ -1,13 +1,107 @@
 <html>
 <head>
 <style>
+html
+{
+	height: 100%; /*At least the height of the entire page */
+	background-color: rgb(150, 140, 128);
+	
+  background-color: powderblue;
+  background-image: url(https://jamingrey.github.io/aaronswanger/TiledBackground.jpg);
+  background-repeat:repeat;
+  box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+  margin: 0px;
+}
+
 body
 {
-    background-color: powderblue;
-    background-image: url(https://jamingrey.github.io/aaronswanger/TiledBackground.jpg);
-    background-repeat:repeat;
-    //box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
-    margin: 0px;
+	height: 100%;
+	margin: 0px;
+  background: none;
+}
+
+a, img
+{
+	/* Fix for IE to not surround image links with a border */
+	border: none;
+}
+
+h2, h3
+{
+	display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Social media icon tooltip hovering */
+.Tooltip
+{
+    display: inline;
+    position: relative;
+}   
+
+.Tooltip:hover:after
+{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    top: 77px;
+    color: #fff;
+    content: attr(data-tip);
+    left: 10%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+}
+
+.Tooltip:hover:before
+{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 0 7px 7px 7px;
+    top: 70px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
+.SocialNetworkIcon
+{
+	float: left;
+	width: 100px;
+	height: 100px;
+	border: 0px;
+	margin: 0px;
+	
+	background-image: url('https://jamingrey.github.io/aaronswanger/LogosCombined.png');
+	background-repeat: no-repeat;
+}
+
+#FacebookIcon 		{	background-position: -100px    0px;	}
+#TwitterIcon		{	background-position: -100px -100px;	}
+#GooglePlusIcon 	{	background-position: -200px    0px;	}
+#YouTubeIcon		{	background-position:    0px -100px;	}
+#iTunesIcon			{	background-position: -300px    0px;	}
+#SoundCloudIcon 	{	background-position: -200px -100px;	}
+#BandcampIcon 		{	background-position:    0px    0px;	}
+#ReverbNationIcon 	{	background-position: -300px -100px;	}
+#PeriscopeIcon	 	{	background-position: -400px -100px;	}
+#WordpressIcon	 	{	background-position: -400px    0px;	}
+#KatchIcon		 	{	background-position: -400px -200px;	}
+
+
+#PaypalDonateButton { float: left;  vertical-align: top; background-position:    0px   -300px; width: 170px; height: 64px; }
+#IhopKCDonateButton { float: right; vertical-align: top; background-position: -200px   -300px; width: 170px; height: 64px; }
+
+#AmazonPurchaseButton { float: right; background-position:    0px -200px; width: 200px; height: 70px; }
+#iTunesPurchaseButton { float: left;  background-position: -200px -200px; width: 200px; height: 70px; }
+
+#AlbumLinkBox
+{
+  min-width: 400px;
+	margin-top: 10px;
+	text-align: center;
 }
 
 #aaron_bio
@@ -99,6 +193,7 @@ body
 
 <div id="aaron_bio" class="album_box basic_styling float_right_on_desktop">
 <img class="picture" src="https://jamingrey.github.io/aaronswanger/BioPhoto.jpg"><br>
+<b>Building Bridges of Encounter Through Worship and the Word of God</b><br><br>
 
 <b>Aaron Swanger</b> is a full time worship artist at HopeCityKC, an outreach ministry from the International House of Prayer Kansas City (IHOPKC). He serves as a pastor and Intercessory/Inner-City missionary.<br>
 
@@ -108,29 +203,33 @@ body
 </div>
 
 <div id="album_betterword" class="album_box basic_styling float_left_on_desktop">
-<img class="picture" src="https://jamingrey.github.io/aaronswanger/ABetterWord.jpg"><br>
-A Better Word
+<a href="https://store.ihopkc.org/products/114868"><img class="picture" src="https://jamingrey.github.io/aaronswanger/ABetterWord.jpg"></a><br>
+<div id="AlbumLinkBox">
+				<a href="http://www.amazon.com/A-Better-Word-Aaron-Swanger/dp/B00B6N35UW"><div id="AmazonPurchaseButton" class="SocialNetworkIcon"></div></a>
+				<a href="https://itunes.apple.com/us/album/a-better-word/id594661925"><div id="iTunesPurchaseButton" class="SocialNetworkIcon"></div></a>
+</div>
 </div>
 
 <br><br><br><br>
-<b style="color:white; text-shadow: 3px 3px 5px rgba(0,0,0,1);">Follow along and see what I'm up to!<b><br>
+<div style="padding:10px;">
+  <b style="color:white; text-shadow: 3px 3px 5px rgba(0,0,0,1); display:inline-block; padding-left:10px;">Follow along and see what I'm up to!</b><br>
 
-<div class="external_link basic_styling">
-Linky
-</div><br>
+  <div class="external_link basic_styling">
+  Linky
+  </div><br>
 
-<div class="external_link basic_styling">
-Linky
-</div><br>
+  <div class="external_link basic_styling">
+  Linky
+  </div><br>
 
-<div class="external_link basic_styling">
-Linky
-</div><br>
+  <div class="external_link basic_styling">
+  Linky
+  </div><br>
 
-<div class="external_link basic_styling">
-Linky
-</div><br>
-
+  <div class="external_link basic_styling">
+  Linky
+  </div><br>
+</div>
 
 </body>
 </html>
