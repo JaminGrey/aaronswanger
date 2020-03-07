@@ -4,16 +4,125 @@
 body
 {
     background-color: powderblue;
-    background-image: url(TiledBackground.jpg);
+    background-image: url(https://jamingrey.github.io/aaronswanger/TiledBackground.jpg);
     background-repeat:repeat;
-    box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+    //box-shadow: inset 0px 0px 20px 10px rgba(0,0,0,0.5);
+    margin: 0px;
+}
+
+#aaron_bio
+{
+
+}
+
+#album_betterword
+{
+
+}
+
+.basic_styling
+{
+  background-color: rgba(0,0,0,0.5);
+  display:inline-block;
+  margin:10px;
+  padding:10px;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.picture
+{
+  border: 2px solid black;
+  border-radius: 0px;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 700px) {
+
+.album_box
+{
+  width: 80%;
+  
+}
+
+.float_left_on_desktop
+{
+  /* do nothing */
+}
+
+.float_right_on_desktop
+{
+  /* do nothing */
+}
+
+
+} /* End of mobile */
+
+/* Desktop Styles */
+@media only screen and (min-width: 701px)
+{
+
+.album_box
+{
+  width: 40%;
+  max-width: 600px;
+}
+
+.float_left_on_desktop
+{
+  float: left;
+}
+
+.float_right_on_desktop
+{
+  float:right
+}
+
+} /* End of desktop */
+
+
+
+
+.external_link
+{
+  min-width: 150px;
+
 }
 
 </style>
 
 </head>
 <body>
-<h1>Hello world!</h1>
+
+<div id="aaron_bio" class="album_box basic_styling float_right_on_desktop">
+<img class="album_box picture" src="https://jamingrey.github.io/aaronswanger/BioPhoto.jpg"><br>
+
+Aaron Swanger
+</div>
+
+<div id="album_betterword" class="album_box basic_styling float_left_on_desktop">
+A Better Word
+</div>
+
+<br>
+
+<div class="external_link basic_styling">
+Linky
+</div><br>
+
+<div class="external_link basic_styling">
+Linky
+</div><br>
+
+<div class="external_link basic_styling">
+Linky
+</div><br>
+
+<div class="external_link basic_styling">
+Linky
+</div><br>
+
 
 </body>
 </html>
